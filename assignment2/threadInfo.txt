@@ -1,0 +1,10 @@
+First thread contains mutex, create a lock in the thread
+Second thread starts, tries to grab mutex
+It cannot because it has been blocked. First thread continues as usual.
+Eventually user enters "time"
+This causes the primary thread to unlock
+The second thread can now do what it needs to->grab time file and 
+	terminate
+join function will stop primary thread from continuing until second 
+	thread is finished
+Repeat the process
